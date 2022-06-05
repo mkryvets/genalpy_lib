@@ -3,6 +3,8 @@ Welcome to Genalpy's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Python API:
+   :caption: Classes:
 
    source/api/solver
+   source/api/population
+   source/api/chromosome
