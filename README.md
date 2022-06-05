@@ -13,20 +13,8 @@ How to find the extremum of a function:
 from genalpy import Solver
 
 # Instantiate a Multiplication object
-multiplication = Solver(2)
+extremum_solver = Solver(function='-x*x + 4', goal='max', dimensions=2, boundaries=[-100, 100])
 
-# Call the multiply method
-result = multiplication.multiply(5)
-```
-
-How to solve the traveling salesman problem:
-
-```Python
-from genalpy import Solver
-
-# Instantiate a Multiplication object
-multiplication = Solver(2)
-
-# Call the multiply method
-result = multiplication.multiply(5)
+# Call the solve method
+result = extremum_solver.solve()
 ```

@@ -10,11 +10,11 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="genalpy",
-    version="0.1.0",
+    version="0.1.4",
     description="Genetic algorithms library",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://genalpy.readthedocs.io/",
+    url="https://genalpy-lib.readthedocs.io/en/latest/",
     author="Mariia Kryvets",
     author_email="mkrivets1@email.com",
     license="MIT",
@@ -31,5 +31,5 @@ setup(
     ],
     packages=["genalpy"],
     include_package_data=True,
-    install_requires=["numpy", "matplotlib"]
+    install_requires=["numpy", "pandas"]
 )

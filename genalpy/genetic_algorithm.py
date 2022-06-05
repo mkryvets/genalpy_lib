@@ -69,8 +69,8 @@ class Solver:
     """
     def __init__(self, task_type='func_extremum', create_population_method='shotgun',
                  selection_method='ranging', recombination_method='transitional', mutation_method='real_number',
-                 reduction_method='selective_scheme', stop_criterion='fitness_stability', stop_value=0.001,
-                 n_pop=1000, function=None, goal='min', dimensions=3,
+                 reduction_method='selective_scheme', stop_criterion='generations_limit', stop_value=20,
+                 n_pop=50, function=None, goal='min', dimensions=3,
                  boundaries=None, focus_boundaries=None, points=None):
         try:
             self.task_type = task_type
