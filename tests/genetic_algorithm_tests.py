@@ -3,45 +3,14 @@ import math
 from genalpy import Solver
 
 
-class MultiplicationTestCase(unittest.TestCase):
+class GeneticTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.multiplication = Solver(2)
-
-    def test_zero(self):
-        """Test 0 multiplied by 2"""
-
-        # 0 multiplied by 2 return 0
-        result = self.multiplication.multiply(0)
-        self.assertEqual(result, 0)
-
-    def test_natural_number(self):
-        """Test natural number 5 multiplied by 2"""
-
-        # 5 multiplied by 2 return 10
-        result = self.multiplication.multiply(5)
-        self.assertEqual(result, 10)
-
-    def test_integer_number(self):
-        """Test integer number -7 multiplied by 2"""
-
-        # -7 multiplied by 2 return -14
-        result = self.multiplication.multiply(-7)
-        self.assertEqual(result, -14)
-
-    def test_rational_number(self):
-        """Test rational number 6/17 multiplied by 2"""
-
-        # 6/17 multiplied by 2 return (6/17) * 2
-        result = self.multiplication.multiply(6/17)
-        self.assertEqual(result, (6/17) * 2)
-
-    def test_real_number(self):
-        """Test real number PI multiplied by 2"""
-
-        # PI multiplied by 2 return 2PI
-        result = self.multiplication.multiply(math.pi)
-        self.assertEqual(result, math.pi * 2)
+        self.genetic = Solver(task_type='func_extremum', create_population_method='shotgun',
+                 selection_method='ranging', recombination_method='transitional', mutation_method='real_number',
+                 reduction_method='selective_scheme', stop_criterion='generations_limit', stop_value=10,
+                 n_pop=100, function='-x * (np.sin(np.sqrt(abs(x)))) + y * np.cos(np.sqrt(abs(y)))',
+                 goal='min', dimensions=3, boundaries=[-30, 30, -10, 10])
 
 
 if __name__ == '__main__':
